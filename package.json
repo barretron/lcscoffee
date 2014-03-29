@@ -1,0 +1,18 @@
+{
+  "name": "lcscoffee",
+  "version": "0.0.0",
+  "description": "largest common substring in CoffeeScript",
+  "main": "lcs.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lcs",
+    "coffee"
+  ],
+  "author": "Barret Furton",
+  "license": "MIT",
+  "dependencies": {
+    "yargs": "^1.2.1"
+  }
+}
