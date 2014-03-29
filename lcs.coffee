@@ -3,11 +3,10 @@ argv = (require 'yargs').argv
 # Check to make sure we have two valid strings to check
 if (not argv._[0]?) or (not argv._[1]?) or (argv._.length isnt 2)
   console.log "Usage: coffee lcs.coffee <string1> <string2>"
-  process.exit(1)
+  process.exit 1
 
 # Get the two strings we're comparing.
 # Cast to a string if necessary.
-
 str1 = "" + argv._[0]
 str2 = "" + argv._[1]
 
@@ -16,14 +15,12 @@ str2 = "" + argv._[1]
 #
 # longString will also be str1 if the two strings 
 # are of equal length.
-
 longString = (if str1.length >= str2.length then str1 else str2)
 shortString = (if longString is str1 then str2 else str1)
 
 # If the shorter string is in the longer string 
 # (or the two strings are equivalent), then return
 # shortString.
-
 if (longString.indexOf shortString) isnt -1
   console.log shortString
   process.exit 0
@@ -54,10 +51,8 @@ if (longString.indexOf shortString) isnt -1
 
 # [Premature?] optimization: assign shortString.length to a variable
 # so we don't call it every time we loop.
-
 shortStringLength = shortString.length
 
-# Another quick optimization
 
 for chunkLength in [shortStringLength-1..1]
 
